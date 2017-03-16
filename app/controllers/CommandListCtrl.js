@@ -7,6 +7,8 @@ app.controller("CommandListCtrl", function($scope, CommandStorage, SearchTermDat
 
 	CommandStorage.getCommandList(user)
 	.then(function(commandCollection){
+		console.log("user", user);
+		console.log("commandCollection", commandCollection);
 		$scope.commands = commandCollection;
 	});
 
@@ -14,6 +16,7 @@ app.controller("CommandListCtrl", function($scope, CommandStorage, SearchTermDat
 		CommandStorage.deleteCommand(commandId)
 		.then(function(response) {
 			CommandStorage.getCommandList(user).then(function(commandCollection){
+				console.log("commandCollection", commandCollection);
 				$scope.commands = commandCollection;
 			});
 		});

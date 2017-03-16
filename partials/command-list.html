@@ -1,15 +1,9 @@
-<h1>Terminal Window needs:</h1>
+<h1>Terminal Window needs</h1>
 <div class="row">
 
-</div>
-<div ng-repeat="command in commands | filter: searchText.search">
-	<!-- <div class="panel panel-default"> -->
-		<!-- <div class="panel-body"> -->
-			<!-- <div class="col-xs-1"><input type="checkbox" name=""/></div> -->
-			<div class="col-md-8"><a ng-href="#!/commands/{{command.id}}">{{command.task}}</a></div>
-			<!-- <div class="col-xs-2">{{command.dueDate}}</div>
-			<div class="col-xs-1">{{command.assignedTo}}</div> -->
-			<!-- <div class="col-xs-1"><button class="btn btn-danger" ng-click="commandDelete(command.id)">Delete</button></div> -->
-		<!-- </div> -->
-	<!-- </div> -->
+	<div ng-repeat="command in commands | filter: searchText.search">
+				<!-- <div class="col-md-8"><a ng-href="#!/commands/{{command.id}}">{{command.subject}}</a></div> -->
+				<div class="col-md-8"><a ng-href="#!/commands/list/{{command.id}}">{{command.subject}}</a></div>
+
+	</div>
 </div>

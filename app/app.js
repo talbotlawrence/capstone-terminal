@@ -36,23 +36,23 @@ app.config(function($routeProvider){
 	}).
 	when('/commands/list',{
 		templateUrl: "partials/command-list.html",
-		controller: 'CommandListCtrl'
-		// resolve: {isAuth}
+		controller: 'CommandListCtrl',
+		resolve: {isAuth}
 	}).
 	when('/commands/new', {
 		templateUrl: "partials/command-form.html",
-		controller: 'CommandNewCtrl'
-		// resolve: {isAuth}
+		controller: 'CommandNewCtrl',
+		resolve: {isAuth}
 	}).
 	when('/commands/:commandId', {
 		templateUrl: "partials/command-details.html",
-		controller: "CommandViewCtrl"
-		// resolve: {isAuth}
+		controller: "CommandViewCtrl",
+		resolve: {isAuth}
 	}).
 	when('/commands/:commandId/edit', {
 		templateUrl: "partials/command-form.html",
-		controller: "CommandEditCtrl"
-		// resolve: {isAuth}
+		controller: "CommandEditCtrl",
+		resolve: {isAuth}
 	}).
 	otherwise('/commands/list');
 });
