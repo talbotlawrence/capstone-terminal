@@ -1,0 +1,40 @@
+<h1>List of Files and Folders</h1>
+
+<!--I'll need to pull the KEY, which is the word description from .json file-->
+<h2>Description:</h2>  
+
+<!--I'll need to pull the VALUE of the DESCRIPTION KEY-->
+<p>{{selectedItem.dueDate}}</p>
+
+<!--Linux-->
+<p>{{selectedItem.assignedTo}}</p>
+
+<!--This will need to be an <a> for an image in the img local folder-->
+<!--The name of the image will have to be stored in firebase or .json-->
+<p>{{selectedItem.location}}</p>
+
+<!--Windows-->
+<p>{{selectedItem.urgency}}</p>
+
+<!--This will need to be an <a> for an image in the img local folder-->
+<!--The name of the image will have to be stored in firebase or .json-->
+<p>{{selectedItem.location}}</p>
+
+
+
+
+
+<button class="btn btn-danger"><a ng-href="#!/items/{{selectedItem.id}}/edit">Edit</a></button>
+<br>
+<br>
+<button class="btn btn-danger" ng-click="itemDelete(item.id)">Delete</button>
+
+
+<!-- <ul class="list-group">
+	<li class="list-group-item"><strong>Assigned To: </strong> {{selectedItem.assignedTo}}</li>
+	<li class="list-group-item"><strong>Due Date:</strong> {{selectedItem.dueDate}}</li>
+	<li class="list-group-item"><strong>Dependencies:</strong> {{selectedItem.dependencies}}</li>
+	<li class="list-group-item"><strong>Location:</strong> {{selectedItem.location}}</li>
+	<li class="list-group-item"><strong>Urgency:</strong> {{selectedItem.urgency}}</li>
+	<li class="list-group-item"><strong>Completed:</strong> {{(selectedItem.isCompleted ? "yes" : "no")}}</li>
+</ul> -->
