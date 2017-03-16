@@ -1,18 +1,18 @@
 'use strict';
 
-app.factory("ItemStorage", ($q, $http, FBCreds) => {
+app.factory("CommandStorage", ($q, $http, FBCreds) => {
 
-  let getItemList = (user) => {
-    let items = [];
+  let getCommandList = (user) => {
+    let commands = [];
     return $q((resolve, reject) => {
-      $http.get(`${FBCreds.databaseURL}/items.json?orderBy="uid"&equalTo="${user}"`)
-      .then((itemObject) => {
-        let itemCollection = itemObject.data;
-        Object.keys(itemCollection).forEach((key) => {
-          itemCollection[key].id = key;
-          items.push(itemCollection[key]);
+      $http.get(`${FBCreds.databaseURL}/commands.json?orderBy="uid"&equalTo="${user}"`)
+      .then((commandObject) => {
+        let commandCollection = commandObject.data;
+        Object.keys(commandCollection).forEach((key) => {
+          commandCollection[key].id = key;
+          commands.push(commandCollection[key]);
         });
-        resolve(items);
+        resolve(commands);
       })
       .catch((error) => {
         reject(error);
@@ -20,10 +20,10 @@ app.factory("ItemStorage", ($q, $http, FBCreds) => {
     });
   };
 
-  let postNewItem = (newItem) =>  {
+  let postNewCommand = (newCommand) =>  {
     return $q((resolve, reject) => {
-      $http.post(`${FBCreds.databaseURL}/items.json`,
-        JSON.stringify(newItem))
+      $http.post(`${FBCreds.databaseURL}/commands.json`,
+        JSON.stringify(newCommand))
       .then((ObjectFromFirebase) => {
         resolve(ObjectFromFirebase);
         })
@@ -33,21 +33,21 @@ app.factory("ItemStorage", ($q, $http, FBCreds) => {
       });
   };
 
-  let deleteItem = (itemId) => {
-    console.log("delete in factory", itemId);
+  let deleteCommand = (commandId) => {
+    console.log("delete in factory", commandId);
     return $q((resolve, reject) => {
-      $http.delete(`${FBCreds.databaseURL}/items/${itemId}.json`)
+      $http.delete(`${FBCreds.databaseURL}/commands/${commandId}.json`)
       .then((ObjectFromFirebase) => {
         resolve(ObjectFromFirebase);
       });
     });
   };
 
-  let getSingleItem = (itemId) => {
+  let getSingleCommand = (commandId) => {
     return $q(function(resolve, reject) {
-      $http.get(`${FBCreds.databaseURL}/items/${itemId}.json`)
-      .then(function(itemObject) {
-        resolve(itemObject.data);
+      $http.get(`${FBCreds.databaseURL}/commands/${commandId}.json`)
+      .then(function(commandObject) {
+        resolve(commandObject.data);
       })
       .catch(function(error) {
         reject(error);
@@ -55,9 +55,9 @@ app.factory("ItemStorage", ($q, $http, FBCreds) => {
     });
   };
 
-  let updateItem = (itemId, editedItem) => {
+  let updateCommand = (commandId, editedCommand) => {
     return $q(function(resolve, reject) {
-      $http.patch(`${FBCreds.databaseURL}/items/${itemId}.json`, angular.toJson(editedItem))
+      $http.patch(`${FBCreds.databaseURL}/commands/${commandId}.json`, angular.toJson(editedCommand))
       .then(function(ObjectFromFirebase) {
         resolve(ObjectFromFirebase);
       })
@@ -67,5 +67,5 @@ app.factory("ItemStorage", ($q, $http, FBCreds) => {
     });
   };
 
-  return {getItemList, postNewItem, deleteItem, getSingleItem, updateItem};
+  return {getCommandList, postNewCommand, deleteCommand, getSingleCommand, updateCommand};
 });

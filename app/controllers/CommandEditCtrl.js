@@ -1,21 +1,21 @@
 "use strict";
 
-app.controller("ItemEditCtrl", function($scope, $location, $routeParams, ItemStorage){
-  $scope.title = "Edit Item";
+app.controller("CommandEditCtrl", function($scope, $location, $routeParams, CommandStorage){
+  $scope.title = "Edit Command";
   $scope.btnText = "Update";
   $scope.newTask = {};
 
-  ItemStorage.getSingleItem($routeParams.itemId)
+  CommandStorage.getSingleCommand($routeParams.commandId)
   .then(function successCallback(response){
-     console.log("getSingleItemresponse", response);
+     console.log("getSingleCommandresponse", response);
       $scope.newTask = response;
   });
 
-  $scope.addNewItem = function(){
-    ItemStorage.updateItem($routeParams.itemId, $scope.newTask)
+  $scope.addNewCommand = function(){
+    CommandStorage.updateCommand($routeParams.commandId, $scope.newTask)
     .then(function successCallback(response) {
       console.log(response);
-      $location.url("/items/list");
+      $location.url("/commands/list");
     });
   };
 });

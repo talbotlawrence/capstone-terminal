@@ -8,10 +8,10 @@ let isAuth = (AuthFactory) => new Promise ( (resolve, reject) => {
     .then ( (userExists) => {
     console.log("userExists", userExists);
         if (userExists){
-      console.log("Authenticated, go ahead.");
+      console.log("Authenticated--nice job typing");
             resolve();
         }else {
-      console.log("Authentication rejected, go away.");
+      console.log("Authentication rejected--you suck!");
             reject();
         }
     });
@@ -34,27 +34,27 @@ app.config(function($routeProvider){
 		controller:"UserCtrl"
 		// resolve: {isAuth}
 	}).
-	when('/items/list',{
-		templateUrl: "partials/item-list.html",
-		controller: 'ItemListCtrl'
+	when('/commands/list',{
+		templateUrl: "partials/command-list.html",
+		controller: 'CommandListCtrl'
 		// resolve: {isAuth}
 	}).
-	when('/items/new', {
-		templateUrl: "partials/item-form.html",
-		controller: 'ItemNewCtrl'
+	when('/commands/new', {
+		templateUrl: "partials/command-form.html",
+		controller: 'CommandNewCtrl'
 		// resolve: {isAuth}
 	}).
-	when('/items/:itemId', {
-		templateUrl: "partials/item-details.html",
-		controller: "ItemViewCtrl"
+	when('/commands/:commandId', {
+		templateUrl: "partials/command-details.html",
+		controller: "CommandViewCtrl"
 		// resolve: {isAuth}
 	}).
-	when('/items/:itemId/edit', {
-		templateUrl: "partials/item-form.html",
-		controller: "ItemEditCtrl"
+	when('/commands/:commandId/edit', {
+		templateUrl: "partials/command-form.html",
+		controller: "CommandEditCtrl"
 		// resolve: {isAuth}
 	}).
-	otherwise('/items/list');
+	otherwise('/commands/list');
 });
 
 app.run(($location, FBCreds) => {

@@ -1,20 +1,20 @@
 "use strict";
 
-app.controller("ItemListCtrl", function($scope, ItemStorage, SearchTermData, AuthFactory){
+app.controller("CommandListCtrl", function($scope, CommandStorage, SearchTermData, AuthFactory){
 
 	$scope.searchText = SearchTermData;
 	let user = AuthFactory.getUser();
 
-	ItemStorage.getItemList(user)
-	.then(function(itemCollection){
-		$scope.items = itemCollection;
+	CommandStorage.getCommandList(user)
+	.then(function(commandCollection){
+		$scope.commands = commandCollection;
 	});
 
-	$scope.itemDelete = function(itemId){
-		ItemStorage.deleteItem(itemId)
+	$scope.commandDelete = function(commandId){
+		CommandStorage.deleteCommand(commandId)
 		.then(function(response) {
-			ItemStorage.getItemList(user).then(function(itemCollection){
-				$scope.items = itemCollection;
+			CommandStorage.getCommandList(user).then(function(commandCollection){
+				$scope.commands = commandCollection;
 			});
 		});
 	};

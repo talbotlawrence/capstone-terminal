@@ -9,10 +9,10 @@ app.controller("UserCtrl", function($scope, $window, AuthFactory, $location){
 	};
 
 	let logout = () => {
-		console.log("logout clicked");
+		console.log("logout clicked Talbot");
 		AuthFactory.logoutUser()
 		.then(function(data){
-			console.log("logged out?", data);
+			console.log("logged out maybe?", data);
 			$window.location.url = "#!/login";
 		}, function(error){
 			console.log("error occured on logout");

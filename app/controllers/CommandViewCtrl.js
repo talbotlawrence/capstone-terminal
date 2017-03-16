@@ -1,16 +1,16 @@
 "use strict";
 
-app.controller("ItemViewCtrl", function($scope, $routeParams, ItemStorage, AuthFactory){
-	$scope.items = [];
+app.controller("CommandViewCtrl", function($scope, $routeParams, CommandStorage, AuthFactory){
+	$scope.commands = [];
 
 	let user = AuthFactory.getUser();
 
-	ItemStorage.getItemList(user)
-	.then(function(itemCollection) {
-		$scope.items = itemCollection;
+	CommandStorage.getCommandList(user)
+	.then(function(commandCollection) {
+		$scope.commands = commandCollection;
 
-		$scope.selectedItem = $scope.items.filter(function(item){
-			return item.id === $routeParams.itemId;
+		$scope.selectedCommand = $scope.commands.filter(function(command){
+			return command.id === $routeParams.commandId;
 		})[0];
 	});
 });
