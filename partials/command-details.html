@@ -1,35 +1,22 @@
 <h1>{{selectedCommand.subject}}</h1>
 
-<!--I'll need to pull the KEY, which is the word description from .json file-->
 <h2>Description:</h2>  
 
-<!--I'll need to pull the VALUE of the DESCRIPTION KEY-->
 <p>{{selectedCommand.description}}</p>
 
-<!--Linux-->
 <h3>Linux: {{selectedCommand.linuxCommand}}</h3>
 
-<!--This will need to be an <a> for an image in the img local folder-->
-<!--The name of the image will have to be stored in firebase or .json-->
-<!-- <p>{{selectedCommand.linuxOutput}}</p> -->
-<!-- <img src="../img/ls-hal.png" alt="image for Linux command output"> -->
 <img src="../img/{{selectedCommand.linuxOutput}}" alt="image for Linux command output">
 
 <br>
 <br>
 
-<!--Windows-->
 <h3>Windows: {{selectedCommand.windowsCommand}}</h3>
 
-<!--This will need to be an <a> for an image in the img local folder-->
-<!--The name of the image will have to be stored in firebase or .json-->
-<!-- <p>{{selectedCommand.windowsOutput}}</p> -->
-<!-- <img src="../img/dir.png" alt="image for Windows command output"> -->
 <img src="../img/{{selectedCommand.windowsOutput}}" alt="image for Windows command output">
 
 <br>
 <br>
-
 
 <button class="btn btn-danger"><a ng-href="#!/commands/{{selectedCommand.id}}/edit">Edit</a></button>
 <br>

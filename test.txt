@@ -1,0 +1,6 @@
+Find my IP address and MAC address
+Suscipit fusce faucibus velit sed, eleifend massa, amet dapibus nonummy. Et nec sem class in lorem metus, ac felis vitae feugiat ac eu. Nulla enim tempor in curabitur, pharetra quis vel vestibulum lorem posuere sapien, soluta officiis gravida lacus nec pellentesque nulla. Sem sed ipsum vestibulum tincidunt. Convallis quam ut in, ipsum mauris nulla et, imperdiet ipsum, massa gravida eget morbi at. Amet in diam sem placerat taciti convallis, elit amet.
+ifconfig
+ifconfig.png
+ipconfig /all
+ipconfigall.png

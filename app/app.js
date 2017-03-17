@@ -3,36 +3,36 @@
 var app = angular.module("TerminalApp", ["ngRoute"]);
 
 let isAuth = (AuthFactory) => new Promise ( (resolve, reject) => {
-  // console.log("running isAuth");
-    AuthFactory.isAuthenticated()
-    .then ( (userExists) => {
-    console.log("userExists", userExists);
-        if (userExists){
-      console.log("Authenticated--nice job typing");
-            resolve();
-        }else {
-      console.log("Authentication rejected--you suck!");
-            reject();
-        }
-    });
+	// console.log("running isAuth");
+	AuthFactory.isAuthenticated()
+		.then ( (userExists) => {
+			console.log("userExists", userExists);
+			if (userExists){
+				console.log("Authenticated--nice job typing");
+				resolve();
+			}else {
+				console.log("Authentication rejected--you suck!");
+				reject();
+			}
+		});
 });
 
 app.config(function($routeProvider){
 	$routeProvider.
-	when('/', {
-		templateUrl: 'partials/login.html',
-		controller:"UserCtrl"
-		// resolve: {isAuth}
-	}).
+		when('/', {
+			templateUrl: 'partials/login.html',
+			controller:"UserCtrl"
+				// resolve: {isAuth}
+		}).
 	when('/login', {
 		templateUrl: 'partials/login.html',
 		controller:"UserCtrl"
-		// resolve: {isAuth}
+			// resolve: {isAuth}
 	}).
 	when('/logout', {
 		templateUrl: 'partials/login.html',
 		controller:"UserCtrl"
-		// resolve: {isAuth}
+			// resolve: {isAuth}
 	}).
 	when('/commands/list',{
 		templateUrl: "partials/command-list.html",
@@ -64,6 +64,6 @@ app.run(($location, FBCreds) => {
 		authDomain: creds.authDomain,
 		databseURL: creds.databaseURL
 	};
-	
+
 	firebase.initializeApp(authConfig);
 });

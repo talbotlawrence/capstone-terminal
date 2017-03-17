@@ -10,21 +10,19 @@ app.controller("CommandNewCtrl", function($scope, CommandStorage, $location, Aut
 
 
 	$scope.newTask = {
-		assignedTo: "",
-		dependencies: "",
-		dueDate: "",
-		isCompleted: false,
-		location: "",
-		task: "",
-		urgency: "",
-		uid: user
+		description: "",
+		linuxCommand: "",
+		linuxOutput: "",
+		subject: "",
+		windowsCommand: "",
+		windowsOutput: ""
 	};
 
 	$scope.addNewCommand = function(){
 		CommandStorage.postNewCommand($scope.newTask)
-		.then(function(response){
-			$location.url("commands/list");
-		});
+			.then(function(response){
+				$location.url("commands/list");
+			});
 
 		$scope.newTask = {};
 	};

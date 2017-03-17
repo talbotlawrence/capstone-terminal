@@ -3,7 +3,7 @@
 app.controller('TerminalCtrl', function($scope, $location){
 	$scope.welcome = "hello";
 	$scope.showListView = true;
-//	$scope.newTask = {};
+	//	$scope.newTask = {};
 
 	$scope.newCommand = function(){
 		// console.log("you clicked on new command");
