@@ -50,7 +50,7 @@ app.config(function($routeProvider){
 		resolve: {isAuth}
 	}).
 	when('/commands/:commandId/edit', {
-		templateUrl: "partials/command-form.html",
+		templateUrl: "partials/command-edit.html",
 		controller: "CommandEditCtrl",
 		resolve: {isAuth}
 	}).
