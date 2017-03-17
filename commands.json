@@ -4,6 +4,7 @@
       "subject": "List of files and folders",
       "description": "Lorem ipsum dolor sit amet, id in id vivamus, tempus lectus sed dui nec integer quam, sollicitudin non, metus lorem lectus libero nostrud et. Rutrum lorem nam in integer. Vulputate adipisci, sit nibh in bibendum bibendum amet mus, at montes ultrices, sem pharetra vulputate sit auctor amet. Sed duis dapibus etiam risus. Elementum sodales lacus pellentesque duis sed urna, in sit leo luctus dui vitae consectetuer, non aenean, convallis justo.",
       "linuxCommand": "ls -hal",
+      "id" : 0,
       "linuxOutput": "ls-hal.png",
       "windowsCommand": "dir",
       "windowsOutput": "dir.png"
@@ -12,6 +13,7 @@
       "subject": "Read a text file in your terminal",
       "description": "Lorem ipsum dolor sit amet, id in id vivamus, tempus lectus sed dui nec integer quam, sollicitudin non, metus lorem lectus libero nostrud et. Rutrum lorem nam in integer. Vulputate adipisci, sit nibh in bibendum bibendum amet mus, at montes ultrices, sem pharetra vulputate sit auctor amet. Sed duis dapibus etiam risus. Elementum sodales lacus pellentesque duis sed urna, in sit leo luctus dui vitae consectetuer, non aenean, convallis justo.",
       "linuxCommand": "cat",
+      "id" : 1,
       "linuxOutput": "cat.png",
       "windowsCommand": "type",
       "windowsOutput": "type.png"
