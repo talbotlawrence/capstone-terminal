@@ -21,7 +21,9 @@ app.controller("CommandNewCtrl", function($scope, CommandStorage, $location, Aut
 	$scope.addNewCommand = function(){
 		CommandStorage.postNewCommand($scope.newTask)
 			.then(function(response){
-				$location.url("commands/list");
+				var newId = response.data.name;
+				$location.url("commands/" + newId);   //'/commands/:commandId'
+				console.log("response from CommandNewCtrl.js", newId);  //response.data.name
 			});
 
 		$scope.newTask = {};

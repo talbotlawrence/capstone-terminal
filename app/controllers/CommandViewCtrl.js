@@ -23,7 +23,7 @@ app.controller("CommandViewCtrl", function($scope, $location, $routeParams, Comm
 				CommandStorage.getCommandList(user).then(function(commandCollection){
 					console.log("commandCollection from the delete", commandCollection);
 					$scope.commands = commandCollection;
-					$location.url("commands/list");   //this is the line I added
+					$location.url("commands/list");   
 				});
 			});
 	};
