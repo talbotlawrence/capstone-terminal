@@ -1,9 +1,9 @@
-<h1>Terminal Window needs</h1>
+<h1>What do you need to accomplish?</h1>
 <div class="row">
 
 	<div ng-repeat="command in commands | filter: searchText.search">
 
-		<div class="col-md-8"><a ng-href="#!/commands/{{command.id}}">{{command.subject}}</a></div>
+		<div class="col-md-8"><h4><a ng-href="#!/commands/{{command.id}}">{{command.subject}}</a></h4></div>
 
 	</div>
 </div>
