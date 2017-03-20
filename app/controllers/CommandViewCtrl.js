@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("CommandViewCtrl", function($scope, $routeParams, CommandStorage, AuthFactory){
+app.controller("CommandViewCtrl", function($scope, $location, $routeParams, CommandStorage, AuthFactory){
 	$scope.commands = [];
 
 	let user = AuthFactory.getUser();
@@ -23,6 +23,7 @@ app.controller("CommandViewCtrl", function($scope, $routeParams, CommandStorage,
 				CommandStorage.getCommandList(user).then(function(commandCollection){
 					console.log("commandCollection from the delete", commandCollection);
 					$scope.commands = commandCollection;
+					$location.url("commands/list");   //this is the line I added
 				});
 			});
 	};
