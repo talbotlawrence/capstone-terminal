@@ -1,24 +1,24 @@
-<h1>{{selectedCommand.subject}}</h1>
+<h1><u>{{selectedCommand.subject}}</u></h1>
 
 <h2>Description:</h2>  
 
 <p>{{selectedCommand.description}}</p>
 
-<h3>Linux: {{selectedCommand.linuxCommand}}</h3>
+<h3>Linux: <span class="commandRed">{{selectedCommand.linuxCommand}}</span></h3>
 
 <img src="../img/{{selectedCommand.linuxOutput}}" alt="image for Linux command output">
 
 <br>
 <br>
 
-<h3>Windows: {{selectedCommand.windowsCommand}}</h3>
+<h3>Windows: <span class="commandRed">{{selectedCommand.windowsCommand}}</span></h3>
 
 <img src="../img/{{selectedCommand.windowsOutput}}" alt="image for Windows command output">
 
 <br>
 <br>
 
-<button class="btn btn-danger"><a ng-href="#!/commands/{{selectedCommand.id}}/edit">Edit</a></button>
+<button class="btn btn-success"><a ng-href="#!/commands/{{selectedCommand.id}}/edit">Edit</a></button>
 <br>
 <br>
 <button class="btn btn-danger" ng-click="commandDelete(selectedCommand.id)">Delete</button>
