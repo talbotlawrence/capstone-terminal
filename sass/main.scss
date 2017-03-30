@@ -1,3 +1,27 @@
 .commandRed {
 	color: red;
 }
+
+ul.nav li a, ul.nav li a:visited {
+    color: silver;
+}
+
+ul.nav li a:hover, ul.nav li a:active {
+    color: #00FF00;
+}
+
+ul.nav li.active a {
+    color: black;
+}
+
+body {
+    background-image: url("../img/background.jpg");
+    background-size: 100% auto;
+}
+
+#main {
+	// background-color: white;
+	// background-size: 25% 50% 25% 50%;
+	width: 50%;
+	height: 50%;
+}
