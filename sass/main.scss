@@ -7,12 +7,26 @@
 // 	// margin-right: 20px; 
 // }
 
+.box {
+	background: rgba(255,255,255,.9);
+	border-radius: 30px;	
+	// background-color: white;
+	// background-position: 0% 0%;
+	// height: 411px;
+	width: 1000px;
+	padding: 30px;
+	// opacity: 0.5;
+	// min-height: 1px;
+	// position: relative;
+	// display: block;
+}
+
 ul.nav li a, ul.nav li a:visited {
-    color: silver;
+    color: #00FF00;
 }
 
 ul.nav li a:hover, ul.nav li a:active {
-    color: #00FF00;
+    color: black;
 }
 
 ul.nav li.active a {
@@ -29,4 +43,8 @@ body {
 	// background-size: 25% 50% 25% 50%;
 	width: 50%;
 	height: 50%;
+}
+
+img {
+	border-radius: 0 0 25px 25px;
 }

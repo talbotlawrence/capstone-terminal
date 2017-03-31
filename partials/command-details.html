@@ -1,3 +1,5 @@
+<div class="box">
+
 <h1><u>{{selectedCommand.subject}}</u></h1>
 
 <h2>Notes:</h2>  
@@ -18,7 +20,8 @@
 <br>
 <br>
 
-<button class="btn btn-success"><a ng-href="#!/commands/{{selectedCommand.id}}/edit">Edit</a></button>
+<button class="btn btn-danger"><a ng-href="#!/commands/{{selectedCommand.id}}/edit">Edit</a></button>
 <br>
 <br>
 <button class="btn btn-danger" ng-click="commandDelete(selectedCommand.id)">Delete</button>
+</div>
