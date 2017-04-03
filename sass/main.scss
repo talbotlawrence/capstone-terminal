@@ -1,3 +1,82 @@
 .commandRed {
 	color: red;
 }
+
+// a.nav-link {
+// 	font-size: 20px;
+// 	// margin-right: 20px; 
+// }
+
+.box1 {
+	background: rgba(255,255,255,.9);
+	border-radius: 30px;	
+	// background-color: white;
+	// background-position: 0% 0%;
+	// height: 411px;
+	width: 1000px;
+	padding: 30px;
+	// opacity: 0.5;
+	// min-height: 1px;
+	// position: relative;
+	// display: block;
+}
+
+.box2 {
+	background: rgba(255,255,255,.9);
+	border-radius: 30px;	
+	// background-color: white;
+	// background-position: 0% 0%;
+	// height: 411px;
+	width: 655px;
+	padding: 30px;
+	// opacity: 0.5;
+	// min-height: 1px;
+	// position: relative;
+	// display: block;
+}
+
+.box3 {
+	background: rgba(255,255,255,.9);
+	border-radius: 30px;	
+	// background-color: white;
+	// background-position: 0% 0%;
+	// height: 411px;
+	width: 655px;
+	padding: 30px;
+	// opacity: 0.5;
+	// min-height: 1px;
+	// position: relative;
+	// display: block;
+}
+
+ul.nav li a, ul.nav li a:visited {
+    color: #00FF00;
+}
+
+ul.nav li a:hover, ul.nav li a:active {
+    color: black;
+}
+
+ul.nav li.active a {
+    color: black;
+}
+
+body {
+    background-image: url("../img/background.jpg");
+    background-size: 100% auto;
+}
+
+#main {
+	// background-color: white;
+	// background-size: 25% 50% 25% 50%;
+	width: 50%;
+	height: 50%;
+}
+
+img {
+	border-radius: 0 0 25px 25px;
+}
+
+// #beWhite {
+// 	color: white;
+// }
