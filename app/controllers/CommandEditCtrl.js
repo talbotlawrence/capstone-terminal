@@ -15,7 +15,9 @@ app.controller("CommandEditCtrl", function($scope, $location, $routeParams, Comm
 		CommandStorage.updateCommand($routeParams.commandId, $scope.newTask)
 			.then(function successCallback(response) {
 				console.log(response);
-				$location.url("/commands/list");
+				// $location.url("/commands/list"); 
+				$location.url("/commands/" + $routeParams.commandId); 
+
 			});
 	};
 });
