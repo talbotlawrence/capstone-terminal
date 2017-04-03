@@ -14,6 +14,7 @@ app.factory("CommandStorage", ($q, $http, FBCreds) => {
 						commandCollection[key].id = key;
 						commands.push(commandCollection[key]);
 					});
+					// commands = commands.sort();
 					resolve(commands);
 				})
 			.catch((error) => {
