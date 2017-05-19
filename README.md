@@ -54,8 +54,8 @@ No testing suites included in this project.
 No additional resources required.
 ## Built With
 
-* [Javascript](http://www.dropwizard.io/1.0.2/docs/) - Main Language
-* [angular](http://www.dropwizard.io/1.0.2/docs/) - The framework used
+* [JavaScript](https://www.javascript.com/) - Main Language
+* [angular](https://www.npmjs.com/package/angular) - The framework used
 
 
 ## Author 
