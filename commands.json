@@ -1,22 +1,438 @@
 {
-  "commands": [
-    {
-      "subject": "List of files and folders",
-      "description": "Lorem ipsum dolor sit amet, id in id vivamus, tempus lectus sed dui nec integer quam, sollicitudin non, metus lorem lectus libero nostrud et. Rutrum lorem nam in integer. Vulputate adipisci, sit nibh in bibendum bibendum amet mus, at montes ultrices, sem pharetra vulputate sit auctor amet. Sed duis dapibus etiam risus. Elementum sodales lacus pellentesque duis sed urna, in sit leo luctus dui vitae consectetuer, non aenean, convallis justo.",
-      "linuxCommand": "ls -hal",
+  "commands" : {
+    "0" : {
+      "description" : "Please understand that there are many options that you can choose for the commands below.  Be sure to checkout their individual descriptions by typing either “man command” on a Linux machine or “command /?” on a Windows machine.  I chose the options that allow you to view the output in a list and view all of the hidden files.",
       "id" : 0,
-      "linuxOutput": "ls-hal.png",
-      "windowsCommand": "dir",
-      "windowsOutput": "dir.png"
+      "linuxCommand" : "ls -hal",
+      "linuxOutput" : "ls-hal.png",
+      "subject" : "List of my files and folders",
+      "windowsCommand" : "dir",
+      "windowsOutput" : "dir.png"
     },
-    {
-      "subject": "Read a text file in your terminal",
-      "description": "Lorem ipsum dolor sit amet, id in id vivamus, tempus lectus sed dui nec integer quam, sollicitudin non, metus lorem lectus libero nostrud et. Rutrum lorem nam in integer. Vulputate adipisci, sit nibh in bibendum bibendum amet mus, at montes ultrices, sem pharetra vulputate sit auctor amet. Sed duis dapibus etiam risus. Elementum sodales lacus pellentesque duis sed urna, in sit leo luctus dui vitae consectetuer, non aenean, convallis justo.",
-      "linuxCommand": "cat",
+    "1" : {
+      "description" : "These commands below will allow you to view the contents of a file from the terminal without using a text editor like Vi or Notepad.  On a Linux box, the command \"cat\" is short for \"concatenate\".",
       "id" : 1,
-      "linuxOutput": "cat.png",
-      "windowsCommand": "type",
-      "windowsOutput": "type.png"
+      "linuxCommand" : "cat file.txt",
+      "linuxOutput" : "cat.png",
+      "subject" : "Read a text file inside the terminal",
+      "windowsCommand" : "type file.txt",
+      "windowsOutput" : "type.png"
+    },
+    "-KfgbEiOBJG9O7MRlKyi" : {
+      "description" : "Please notice the subtle differences between the commands below: the Linux command has an “f” for the second character and the Windows command has a “p” for the second character.  Also, please note that outputs may vary depending on your connections.  I include the /all option for the Windows command so that you can view the MAC address.  The IP address you receive from these commands below is going to be the private address that your local router or DHCP server has given you.  Without it, you would not be able to reach the internet or use local network services like printing.  Your MAC address, also used for networking, is your hardware address given to you by your manufacturer like Apple or Dell (I’m sorry).  Both your IP address and your MAC address need to be unique or you will experience strange network issues.",
+      "linuxCommand" : "ifconfig",
+      "linuxOutput" : "ifconfig.png",
+      "subject" : "Find my IP address and MAC address",
+      "windowsCommand" : "ipconfig /all",
+      "windowsOutput" : "ipconfigall.png"
+    },
+    "-Kfm7C0lcZp8m8tVqv-N" : {
+      "description" : "The ping command sends arbitrary packets to your selected destination and receives packets back from that destination if it is turned on and connected to a network.  I have added the -t option for the Windows command line so that your computer will ping continuously.  The Linux terminal will ping continuously by default.  You can press “Control + c” on your keyboard to stop the command.  Please note that you can also ping names like the Windows example below.",
+      "linuxCommand" : "ping ipaddress / name",
+      "linuxOutput" : "pinglinux.png",
+      "subject" : "Check whether or not a computer or server is booted and online",
+      "windowsCommand" : "ping -t ipaddress / name",
+      "windowsOutput" : "pingwindows.png"
+    },
+    "-Kfm8QaaG6RgG8ZGbuKJ" : {
+      "description" : "Both Linux and Windows terminals will give you a list of all of your options and sometimes give you examples.  I typed “man ping” for the Linux terminal below.  You can also occasionally type “info command” on a Linux machine to receive similar information.",
+      "linuxCommand" : "man command",
+      "linuxOutput" : "man.png",
+      "subject" : "Read the manual/find information about your terminal commands",
+      "windowsCommand" : "command /?",
+      "windowsOutput" : "question.png"
+    },
+    "-KfsxNbF_EqqmpLdoK5o" : {
+      "description" : "You only have to type the word clear in your Linux terminal to complete this task.  If only Windows were this practical.",
+      "linuxCommand" : "clear",
+      "linuxOutput" : "clear.png",
+      "subject" : "Clear the contents of my terminal",
+      "windowsCommand" : "cls",
+      "windowsOutput" : "cls.png"
+    },
+    "-KfsxuMxiJ9wQIbqT5BC" : {
+      "description" : "The words directory and folder are synonymous.  The command cd means change directory.  Please notice that you can type \"cd ..\" to move up one directory and \"cd\" on a Linux box to move to your home directory from anywhere on your system.",
+      "linuxCommand" : "cd",
+      "linuxOutput" : "cdlinux.png",
+      "subject" : "Move to a different folder / directory",
+      "windowsCommand" : "cd",
+      "windowsOutput" : "cdwindows.png"
+    },
+    "-KfsymDL8SZ5xcTWns3H" : {
+      "description" : "These commands are particularly useful when remoting into a server.  If the previous user forgot to logoff, then you can use the \"whoami\" command to see who's session you have hijacked.  Whoami can also help you check to see if you are logged in as \"root\".  If you are, you can hit \"Control + D\" on a Linux box to log out of the root session in the terminal.",
+      "linuxCommand" : "whoami",
+      "linuxOutput" : "whoamilinux.png",
+      "subject" : "Check to see who's user name you are using",
+      "windowsCommand" : "whoami",
+      "windowsOutput" : "whoamiwindows.png"
+    },
+    "-KfszCTxlmKNHcB5btCj" : {
+      "description" : "The alias command in both Linux and Windows terminals can save you a great deal of typing.  It can be the most helpful when having to type a long command that you frequently use or when you use the same command options over and over again.  Please be mindful that your aliases are not permanent.  On a Linux machine, you would need to run \"echo \"alias newcommand='oldcommand'\" >> ~/.bash_aliases && source ~/.bash_aliases\" in order to keep the alias.  This command appends the alias to a .bash_aliases file and \"source\" reloads the terminal so that you don't have to logout in order to start using your alias.  Doskey macros are not saved.  In Windows, it might be a better idea to save each command as a separate .cmd file or .bat file.",
+      "linuxCommand" : "alias newcommand='oldcommand'",
+      "linuxOutput" : "alias.png",
+      "subject" : "Create an alias for a specific command",
+      "windowsCommand" : "doskey newcommand=oldcommand",
+      "windowsOutput" : "doskey.png"
+    },
+    "-KfszJUux0KfMj06sSEt" : {
+      "description" : "Your terminal window will usually tell you where you are.  However, on some servers, you may need to use this command before you run certain commands or software like \"http-server\".",
+      "linuxCommand" : "pwd",
+      "linuxOutput" : "pwd.png",
+      "subject" : "Get the current path",
+      "windowsCommand" : "echo %cd%",
+      "windowsOutput" : "echocd.png"
+    },
+    "-Kfsz_omXbBf8N7gQy08" : {
+      "description" : "You can use either the \"w\" command or the \"who\" command on a Linux box.  I prefer \"w\" because it gives you a little more information like what the user is doing and column labels.  This command is certainly useful to run on a server.  System administrators have a bad habit of not logging off of their machines.  These commands are also helpful for security reasons.",
+      "linuxCommand" : "w",
+      "linuxOutput" : "who.png",
+      "subject" : "See who is currently logged into a computer or server",
+      "windowsCommand" : "query user / quser",
+      "windowsOutput" : "quser.png"
+    },
+    "-Kfszm8wpGGNWz-4lxsi" : {
+      "description" : "You can also use the move command to rename a file in your terminal: mv name.txt newname.txt.  Don't forget that you can use the -i option on a Linux box or the /p on a Windows box to prompt you in case there is a file with the same name at your destination.  Without the prompt, it will overwrite the old file and not warn you.",
+      "linuxCommand" : "mv file.txt /new/path/",
+      "linuxOutput" : "mvlinux.png",
+      "subject" : "Move a file from one folder to another",
+      "windowsCommand" : "move file.txt /new/path/",
+      "windowsOutput" : "move.png"
+    },
+    "-Kfszqr_8YVwQ8umeW4I" : {
+      "description" : "These commands are helpful when you need to make backup copies of specific files.  Don't forget that you can use the -i option on a Linux box or the /p on a Windows box to prompt you in case there is a file with the same name at your destination.  Without the prompt, it will overwrite the old file and not warn you.",
+      "linuxCommand" : "cp file.txt /new/path/",
+      "linuxOutput" : "cp.png",
+      "subject" : "Copy a file from one folder to another",
+      "windowsCommand" : "copy file.txt /new/path/",
+      "windowsOutput" : "copy.png"
+    },
+    "-KfszymokeN4FfFa5xvJ" : {
+      "description" : "Don't forget that you can build multiple files with \"touch\" simply by putting a space between the file names.  The \"echo\" command in the Windows command line will create a file with one empty line in it.",
+      "linuxCommand" : "touch file.js another.txt",
+      "linuxOutput" : "touch.png",
+      "subject" : "Create a file",
+      "windowsCommand" : "echo.>filename.txt",
+      "windowsOutput" : "echofile.png"
+    },
+    "-Kft-9jpeVi7dr8LoKn3" : {
+      "description" : "The Windows command line will also allow you to use the \"mkdir\" command as well, but I like the \"md\" command for its brevity.",
+      "linuxCommand" : "mkdir foldername",
+      "linuxOutput" : "mkdir.png",
+      "subject" : "Create a folder / directory",
+      "windowsCommand" : "md foldername",
+      "windowsOutput" : "md.png"
+    },
+    "-KfvX_6Q8sqSSb4leX-Z" : {
+      "description" : "Be careful when typing the word \"date\" in a Windows command line: it will think that you are trying to change the date on your local PC.",
+      "linuxCommand" : "date",
+      "linuxOutput" : "date.png",
+      "subject" : "Display the date",
+      "windowsCommand" : "date /t",
+      "windowsOutput" : "datet.png"
+    },
+    "-Kg5MB6sZb6jY7dOg839" : {
+      "description" : "This command will list all of your custom-built aliases as well as the built in aliases.  Please be aware that your doskey macros will not save when your exit your command prompt.  You will need to save your customem-built commands in .cmd files or .bat files.",
+      "linuxCommand" : "alias",
+      "linuxOutput" : "aliaslist.png",
+      "subject" : "View a list of all of your aliases",
+      "windowsCommand" : "doskey /macros",
+      "windowsOutput" : "macros.png"
+    },
+    "-Kg5Po1l6RPMfX0vla98" : {
+      "description" : "Traceroute is a utility that records the route (the specific gateway computers at each hop) through the Internet between your computer and a specified destination computer. It also calculates and displays the amount of time each hop took.",
+      "linuxCommand" : "traceroute",
+      "linuxOutput" : "traceroute.png",
+      "subject" : "Print the path of IP addresses from your computer to a destination",
+      "windowsCommand" : "tracert",
+      "windowsOutput" : "tracert.png"
+    },
+    "-Kg5S-Yn12TYjcen4v6x" : {
+      "description" : "On a Linux box, you need to use the \"unalias\" command.  Please be aware that your doskey macros will not save when your exit your command prompt. You will need to save your customem-built commands in .cmd files or .bat files.",
+      "linuxCommand" : "unalias yourcommand",
+      "linuxOutput" : "unalias.png",
+      "subject" : "Remove your custom-built alias",
+      "windowsCommand" : "Exit out of the command line or reboot :)",
+      "windowsOutput" : "undoskey.png"
+    },
+    "-Kg5SGAHNECi01m-Znmt" : {
+      "description" : "Be careful when typing the word \"time\" in a Windows command line: it will think that you are trying to change the time on your local PC.",
+      "linuxCommand" : "date",
+      "linuxOutput" : "date.png",
+      "subject" : "Display the time",
+      "windowsCommand" : "time /t",
+      "windowsOutput" : "time.png"
+    },
+    "-Kg5WVAt0az-wBU8NeYN" : {
+      "description" : "On Linux, you can use the \"-A\" switch plus a number to get the month after the current month.  For example, \"cal -A 1\" will give you this month and next month.  -A is for \"after\" and -B stands for \"before\".  Windows doesn't really have a calendar command.",
+      "linuxCommand" : "cal",
+      "linuxOutput" : "cal.png",
+      "subject" : "Display your calendar",
+      "windowsCommand" : "date /t",
+      "windowsOutput" : "datet.png"
+    },
+    "-KgG12rME9OSzIgBpMPP" : {
+      "description" : "These commands depend on which directory you are currently using in your terminal.  The higher up you go, the farther your command will reach.  In the Linux example, I'm using the \"*\" wildcard, meaning I want my command to return any file that ends with \".pl\".  On a Windows box, I use the same wildcard.  The \"/s\" stands for \"subdirectories\", meaning search everywhere.",
+      "linuxCommand" : "find -iname \"*.extention\"",
+      "linuxOutput" : "find.png",
+      "subject" : "Find all of the specific types of files on your hard drive",
+      "windowsCommand" : "dir *.extention /s",
+      "windowsOutput" : "dirs.png"
+    },
+    "-KgG1atAbHGQi8iPikoI" : {
+      "description" : "On a Linux box, you need elevated admin rights to change the permissions of a file.  You need to begin the commands with “sudo”, which stands for super user do.  chmod stands for “change mode”.  There's a lot going on with the 700 number.  The seven means that the owner of the file can read, write, and execute the file.  The two zeroes mean that everybody else cannot read, write, or execute the file; they don't have the permissions to do anything.  The .sh extension on the file in Linux means that you can store code to be executed and run at any time.  For the Windows command, you are granting permissions for everyone in a group.  The “F” option stands for full control.",
+      "linuxCommand" : "sudo chmod 700 file.sh",
+      "linuxOutput" : "chmod.png",
+      "subject" : "Change the permissions on a file",
+      "windowsCommand" : "icacls \"filename\" /grant \"Users\":F",
+      "windowsOutput" : "icacls.png"
+    },
+    "-KgG2KDQhtM53JKd_f24" : {
+      "description" : "A lot of times, one command is not enough and you need to combine commands.  There are a few ways to complete this task.  One popular way is to use the pipe \"|\", which takes the output from the first command and hands it to the second.  The Linux command is a basic example: the cat command dumps the content of file.txt, the \"|\" pipes that content to the grep command, which searches for \"everything in quotes\".",
+      "linuxCommand" : "cat file.txt | grep \"this phrase\"",
+      "linuxOutput" : "pipelinux.png",
+      "subject" : "Manipulate the output from a previous command",
+      "windowsCommand" : "type file.txt | findstr \"this phrase\"",
+      "windowsOutput" : "pipewindows.png"
+    },
+    "-KgG2yVPa7aPpRDM2xJE" : {
+      "description" : "This command on both machines is nice and simple!",
+      "linuxCommand" : "hostname",
+      "linuxOutput" : "hostname.png",
+      "subject" : "Display the name of the computer you are using",
+      "windowsCommand" : "hostname",
+      "windowsOutput" : "hostnamew.png"
+    },
+    "-KgG3lavMQBgWIu2d4QK" : {
+      "description" : "You can use the -i option on a Linux box or the /p on a Windows box to prompt you in case there is a file with the same name at your destination. Without the prompt, it will overwrite the old file and not warn you.",
+      "linuxCommand" : "rm -i file.txt",
+      "linuxOutput" : "rm.png",
+      "subject" : "Delete a file",
+      "windowsCommand" : "del /p file.txt",
+      "windowsOutput" : "del.png"
+    },
+    "-KgG4E30LOCuHicNKfVj" : {
+      "description" : "Please be very careful with these commands.  The options I am showing you below will not only delete the folder, but they will also delete everything in those folders.  On a Linux box, the “r” option stands for recursive (delete everything), the “f” stands for force, and the \"i\" stands for interactive meaning prompt.  On Windows, the “s” option stands for and will include subdirectories.",
+      "linuxCommand" : "rm -rfi foldername/",
+      "linuxOutput" : "rmrf.png",
+      "subject" : "Delete a folder",
+      "windowsCommand" : "rmdir /s \\foldername",
+      "windowsOutput" : "rmdir.png"
+    },
+    "-KgG4n4YrPzb1dDw3Uv-" : {
+      "description" : "Please be careful with these commands: they will delete the existing content and replace it with the content from your echo command.",
+      "linuxCommand" : "echo \"This is a line\" > file.txt",
+      "linuxOutput" : "overl.png",
+      "subject" : "Overwrite the contents of a file",
+      "windowsCommand" : "echo \"This is a line\" > file.txt",
+      "windowsOutput" : "overwritew.png"
+    },
+    "-KgG55vgugHfvuwiVoaj" : {
+      "description" : "Don't worry!  This command won't delete any existing content.  It will only add the content to the bottom of the file.",
+      "linuxCommand" : "echo \"This is a line too!!!\" >> file.txt",
+      "linuxOutput" : "appendl.png",
+      "subject" : "Append a line to the bottom of a file",
+      "windowsCommand" : "echo \"This is a line\" >> file.txt",
+      "windowsOutput" : "appendw.png"
+    },
+    "-KgG6Mkrt-KbUpiPvM_Z" : {
+      "description" : "Simple commands to change your local password for Linux and Windows.",
+      "linuxCommand" : "passwd",
+      "linuxOutput" : "passwd.png",
+      "subject" : "Change your password",
+      "windowsCommand" : "net user username password",
+      "windowsOutput" : "passwordw.png"
+    },
+    "-KgG8Uv5o1iWzaOubspE" : {
+      "description" : "Interesting that Linux is less and Windows is more.  Please note that on Windows, you are directing the content of file.txt to the \"more\" command.",
+      "linuxCommand" : "less file.txt",
+      "linuxOutput" : "less.png",
+      "subject" : "View a large file one page at a time starting with the first page",
+      "windowsCommand" : "more < file.txt",
+      "windowsOutput" : "more.png"
+    },
+    "-KgG9_pkFPDaMf4NyOIO" : {
+      "description" : "Occasionally, you need to read the last few lines of a text file.  This is especially helpful when you need to tail a dynamic log file (that's always changing/updating).  You can change the number in the commands below to any number you want.  On a Windows box, you can't actually tail a file.  The \"more\" command below is skipping the first 5 lines of the text file.",
+      "linuxCommand" : "tail -n ­yournumber file.txt",
+      "linuxOutput" : "tail.png",
+      "subject" : "Read the last 5 lines of a file",
+      "windowsCommand" : "more +yournumber file.txt",
+      "windowsOutput" : "nottail.png"
+    },
+    "-KgGAJikiky2wxxcEmyN" : {
+      "description" : "The \"ps\" command will give you a list of all of your processes that are currently running.  I pipe ps into the \"less\" command because there are a lot of processes running and you will want to view them all.",
+      "linuxCommand" : "ps aux | less",
+      "linuxOutput" : "psaux.png",
+      "subject" : "Display all of the current processes",
+      "windowsCommand" : "tasklist",
+      "windowsOutput" : "tasklist.png"
+    },
+    "-KgGFEaEclRihttfWCNl" : {
+      "description" : "Please note that these commands do not change or save the content of the files; they only affect the output.  On a Linux box, the \"-n\" option will sort numbers last.  By default without options, the sort command will sort numbers first and letters second.",
+      "linuxCommand" : "sort ­-n file.txt | less",
+      "linuxOutput" : "sortl.png",
+      "subject" : "Sort the lines inside of a file",
+      "windowsCommand" : "sort file.txt",
+      "windowsOutput" : "sortw.png"
+    },
+    "-KgGGJk2UC_d5AIbgOyy" : {
+      "description" : "Admittedly, these commands are crude and should only be used when you are in a hurry.  There are text editors and software that are better suited to help you see differences.",
+      "linuxCommand" : "diff -u file1.txt file2.txt",
+      "linuxOutput" : "diff.png",
+      "subject" : "Compare the differences between two files",
+      "windowsCommand" : "fc file1.txt file2.txt",
+      "windowsOutput" : "fc.png"
+    },
+    "-KgGHjaTaajxv3inEVvs" : {
+      "description" : "On a Linux box, you need elevated admin rights to change the permissions of a file.  You need to begin the commands with “sudo”, which stands for super user do.  lsmod stands for \"list modules\".   I pipe the lsmod into the \"less\" command because there are many drivers and you might want to view them one at a time.  For Windows, the \"/si\" option means you only want to view signed drivers and the \"/v\" option stands for verbose.",
+      "linuxCommand" : "sudo lsmod | less",
+      "linuxOutput" : "lsmod.png",
+      "subject" : "Display a list of installed drivers",
+      "windowsCommand" : "driverquery /si /v",
+      "windowsOutput" : "driverquery.png"
+    },
+    "-KgGV2pILTfKvLu0XoJH" : {
+      "description" : "Please note that the wireless option in Linux may not be listed under \"wlp2s0\" like in the example below.  Also notice that I'm piping the iw command into the grep command-you are telling your terminal that you only won't to see the SSIDs and not any other information.  SSID stands for Service Set Identifier, which is the name of your wireless network.",
+      "linuxCommand" : "sudo iw dev wlp2s0 scan | grep SSID",
+      "linuxOutput" : "wirelesswire.png",
+      "subject" : "Show local wireless networks",
+      "windowsCommand" : "netsh wlan show networks",
+      "windowsOutput" : "netshw.png"
+    },
+    "-KgGVFzpOAguLTPumhYF" : {
+      "description" : "If your computer is moving at a snail's pace, it may be because you don't have enough RAM installed.  You can use the commands below to see the size of your memory.  On a Linux  box, I use the \"-g\" option to show the size in gigabytes instead of bytes.  the free command can also show you how much memory is currently being used.  On a Windows box, the output for wmic memorychip is ugly.  You could run the command \"wmic memorychip > ram.txt\", which sends the output to a text file.  You can then view the cleaner output by opening the text file in notepad.",
+      "linuxCommand" : "free -g",
+      "linuxOutput" : "free.png",
+      "subject" : "Display the amount RAM",
+      "windowsCommand" : "wmic memorychip",
+      "windowsOutput" : "memorychip.png"
+    },
+    "-KgGWKDZ0SyoBmu7iTdS" : {
+      "description" : "On a Linux box, you are technically searching for software that's installed via packages.  These commands are excellent for determining what software is installed on servers once you have remoted into them.",
+      "linuxCommand" : "apt list --installed | less",
+      "linuxOutput" : "aptlist.png",
+      "subject" : "Display a list of installed software",
+      "windowsCommand" : "wmic product get name | sort",
+      "windowsOutput" : "product.png"
+    },
+    "-KgGWmEb74lvjmCNt4zj" : {
+      "description" : "On a Linux box, you are technically searching for software that's installed via packages.  You typically install software on a Windows box with a one-click executable or a .msi file. For Linux, I used apt list to find every package installed, and then I send it to a grep command which searches for the specific software in the quotes.  In the example below, I use the * wildcard.  What this character displays is every package that has the word \"clone\" anywhere in its name.  I also use wildcards in windows as well.  However, you use the % in Windows instead of *.  In the windows example below, I'm searching for any software installed that has the word \"ware\" in it, no matter what's in front of the word ware or behind it.",
+      "linuxCommand" : "apt list --installed | grep \"software name\"",
+      "linuxOutput" : "aptgrep.png",
+      "subject" : "Check if specific software is installed",
+      "windowsCommand" : "wmic product where “Name like ‘%softwarename%’”",
+      "windowsOutput" : "like.png"
+    },
+    "-KgGXOSywcc6B7AbQ7uk" : {
+      "description" : "You typically use the graphical user interface to view the mapped printers on your own computer.  These commands below are beneficial when you need to list the printers mapped on remote computers.  On a Linux box, the \"-p\" option will list the printers that are enabled.",
+      "linuxCommand" : "lpstat -p",
+      "linuxOutput" : "lpstat.png",
+      "subject" : "List the mapped printers",
+      "windowsCommand" : "wmic printer get name",
+      "windowsOutput" : "printer.png"
+    },
+    "-KgGXir1TJaPMaSo5G8O" : {
+      "description" : "It is always important to know the size of your hard drive.  You need this information when installing software or replacing the drive itself and reinstalling the operating system of your choice.  The following commands will display the sizes of your hard drive partitions.  On a Linux box, the \"-h\" option with give you the partitions in human readable sizes.",
+      "linuxCommand" : "df -h",
+      "linuxOutput" : "dfh.png",
+      "subject" : "Display the size of the hard drive",
+      "windowsCommand" : "wmic logicaldisk get size,freespace,caption",
+      "windowsOutput" : "logicaldisk.png"
+    },
+    "-KgGZSg5bhRr6SBazoRL" : {
+      "description" : "These commands can give you basic information about your CPU or processor.  Typically, you would need information like the architecture, the vendor and model of your processor, and your processor's speed in megahertz (MHz).",
+      "linuxCommand" : "lscpu",
+      "linuxOutput" : "lscpu.png",
+      "subject" : "Display information about your processor",
+      "windowsCommand" : "wmic cpu",
+      "windowsOutput" : "wmiccpu.png"
+    },
+    "-KgGacuXSAAPLLu7dZox" : {
+      "description" : "A process is an instance of a running program.  Some applications, like your browser, use multiple processes to function.  Occasionally, certain processes can eat up too many resources from your processor and it is good to shut them down.  You have to kill the process by its ID number.  PID stands for process indentifier.  Please be careful and try to understand what process you are killing.",
+      "linuxCommand" : "kill number",
+      "linuxOutput" : "kill.png",
+      "subject" : "Kill a process that is eating up your resources",
+      "windowsCommand" : "taskkill /f /pid number",
+      "windowsOutput" : "taskkill.png"
+    },
+    "-KgGbq8KBNIHRE6Kit2T" : {
+      "description" : "A process is an instance of a running program.  Some applications, like your browser, use multiple processes to function.  Occasionally, certain processes can eat up too many resources from your processor and it's valuable to know which processes are causing the problem.  The \"top\" command in Linux and the tasklist command in Windows can help you assess the issue.",
+      "linuxCommand" : "top",
+      "linuxOutput" : "top.png",
+      "subject" : "Display processes that are eating up your resources",
+      "windowsCommand" : "tasklist /fi “cputime gt 00:30:00”",
+      "windowsOutput" : "cputime.png"
+    },
+    "-KgGcIYtkvrb-9pGxL8s" : {
+      "description" : "Grep stands for global regular expression print, but it is basically a nerd word for search.  The grep command will print the entire line inside of your file when you grep or search for a specific word.  You don't have to use quotes around the word that you're searching for if it's just one word.  However, you will have to use quotes if you have two words because of the space.  On a windows box, the \"/i\" for the find command means ignore case.",
+      "linuxCommand" : "grep 'word' file.txt",
+      "linuxOutput" : "grep.png",
+      "subject" : "Search for a word in a file",
+      "windowsCommand" : "find /i \"word\" C:\\Users\\Martin\\Desktop\\file.txt",
+      "windowsOutput" : "findi.png"
+    },
+    "-KgGeBtmdwNxc71YPM5g" : {
+      "description" : "",
+      "linuxCommand" : "ls -hal /etc/NetworkManager/system-connections/",
+      "linuxOutput" : "listprofiles.png",
+      "subject" : "Display the wireless profiles that you have used",
+      "windowsCommand" : "netsh wlan show profiles",
+      "windowsOutput" : "wlanshow.png"
+    },
+    "-KgGeP-1nQCEE1QR81ID" : {
+      "description" : "",
+      "linuxCommand" : "reboot -f",
+      "linuxOutput" : "reboot.png",
+      "subject" : "Reboot your computer",
+      "windowsCommand" : "shutdown /r",
+      "windowsOutput" : "shutdown.png"
+    },
+    "-KgGf-z_vW6ehaW9t2jM" : {
+      "description" : "A mapped or mounted drive is a hard drive partition from your local computer or a remote server.  put simply, most hard drives are split up into sections or partitions.  On a Windows box, the operating system will assign letters to these sections.  In a large enterprise environment, it is beneficial to mount drives from servers to your local computer.  For example, you can mount a facet of your file server and then share documents with other users at your office who also have access to this fileserver.  On a Linux box, I use the \"-h\" option to display the sizes of the partitions in human readable powers like kilobytes, megabytes, gigabytes etc.",
+      "linuxCommand" : "df -h",
+      "linuxOutput" : "dfh.png",
+      "subject" : "Display your mapped drives / mounted drives",
+      "windowsCommand" : "net use",
+      "windowsOutput" : "netuse.png"
+    },
+    "-KgGfStBM_lzj58qtN64" : {
+      "description" : "A service is a process that is running in the background. I prefer to pipe the services commands into a less statement because there are so many services that are running and you might want to view them all.",
+      "linuxCommand" : "service --status-all | less",
+      "linuxOutput" : "service.png",
+      "subject" : "Display your running services",
+      "windowsCommand" : "net start",
+      "windowsOutput" : "netstart.png"
+    },
+    "-KgGfuJpncVU5qIzLstg" : {
+      "description" : "A service is a process that is running in the background.  The user will not interact with the service itself but other facets of your operating system will.  In a Windows environment, you typically interact with services by using the graphical user interface (service.msc).  However, there may be a time when you remote into a Windows server where it will be easier to start the service from the command line.  Please keep in mind that you can also stop and restart services from the terminal.  In the Linux example below, the Slack software opened as soon as I started its service.",
+      "linuxCommand" : "/etc/init.d/servicename start",
+      "linuxOutput" : "servicel.png",
+      "subject" : "Start a service",
+      "windowsCommand" : "sc start servicename",
+      "windowsOutput" : "sc.png"
+    },
+    "-KgGgJrq13-weNxQO5DM" : {
+      "description" : "In an enterprise environment, you need an IP address in order to communicate with the other nodes on the network.  A node would be any device with an IP address like a server or a printer.  You typically receive IP addresses from a DHCP server or router.  Occasionally, there are instances where you will not receive an IP address automatically.  You can demand an IP address with the commands below if the DHCP server is available.  Another example of when you would need these commands is when you have an IP address conflict, which is when two nodes on the network have the same IP address due to human error.  You can use the commands below to receive a new IP address and resolve the conflict.",
+      "linuxCommand" : "sudo dhclient -v",
+      "linuxOutput" : "dhclient.png",
+      "subject" : "Receive a new IP address from your DHCP server / router",
+      "windowsCommand" : "ipconfig /release; ipconfig /renew",
+      "windowsOutput" : "renew.png"
+    },
+    "-KgGgdAgu4zBLoLnMWYb" : {
+      "description" : "The netstat command will display all of your network connections, routing tables, and interface statistics.  Basically, it will show you who your computer is communicating with and who is communicating with you.  Netstat will print a lot of information, so it is a good idea to use it with the less command.",
+      "linuxCommand" : "netstat | less",
+      "linuxOutput" : "netstatless.png",
+      "subject" : "Display all network connections to your computer",
+      "windowsCommand" : "netstat",
+      "windowsOutput" : "netstat.png"
+    },
+    "-KgpdlrsBYOQyT4WwN_s" : {
+      "description" : "Sometimes the name of a machine on a network can tell you a lot about what it is or does.  You can use the \"nslookup\" command on both Linux and Windows.  Dig stands for \"domain information groper\" (no, I'm not kidding).",
+      "linuxCommand" : "dig -x ipaddress",
+      "linuxOutput" : "dig.png",
+      "subject" : "Look up a computer name by its IP address or an IP address by its computer name",
+      "windowsCommand" : "nslookup ipaddress / name",
+      "windowsOutput" : "nslookup.png"
     }
-  ]
+  }
 }
