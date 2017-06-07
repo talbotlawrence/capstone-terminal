@@ -5,11 +5,11 @@ app.controller('TerminalCtrl', function($scope, $location){
 	$scope.showListView = true;
 	//	$scope.newTask = {};
 
-	$scope.newCommand = function(){
-		$location.url("/commands/new");
-	};
+	// $scope.newCommand = function(){
+	// 	$location.url("/commands/new");
+	// };
 
-	$scope.allCommand = function(){
-		$location.url("/commands/list");
-	};
+	// $scope.allCommand = function(){
+	// 	$location.url("/commands/list");
+	// };
 });

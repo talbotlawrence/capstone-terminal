@@ -1,15 +1,27 @@
 'use strict';
 
-app.factory("CommandStorage", ($q, $http, FBCreds) => {
+app.factory("CommandStorage", ($q, $http) => {	///////////DON'T NEED FBCreds???
 
-	let getCommandList = (user) => {
+	let getCommandList = () => {	///////////DO YOU NEED (user)???
 		let commands = [];
 		return $q((resolve, reject) => {
 			// $http.get(`${FBCreds.databaseURL}/commands.json?orderBy="uid"&equalTo="${user}"`)
-			$http.get(`${FBCreds.databaseURL}/commands.json`)
+			// $http.get(`${FBCreds.databaseURL}/commands.json`)	///////////DO YOU NEED???
+			// $http.get(`../../commands.json`)
+			// $.getJSON('../../commands.json')
+			$.ajax({
+				url: '../../commands.json',
+				dataType: 'json',
+				type: 'get',
+				cache: false,
+				success: function(data) {
+					console.log(data);
+				}
+			})
+
 				.then((commandObject) => {
 					let commandCollection = commandObject.data;
-					console.log("commandCollection", commandCollection);
+					// console.log("commandCollection", commandCollection);
 					Object.keys(commandCollection).forEach((key) => {
 						commandCollection[key].id = key;
 						commands.push(commandCollection[key]);
@@ -23,32 +35,33 @@ app.factory("CommandStorage", ($q, $http, FBCreds) => {
 		});
 	};
 
-	let postNewCommand = (newCommand) =>  {
-		return $q((resolve, reject) => {
-			$http.post(`${FBCreds.databaseURL}/commands.json`,
-					JSON.stringify(newCommand))
-				.then((ObjectFromFirebase) => {
-					resolve(ObjectFromFirebase);
-				})
-			.catch((error) => {
-				reject(error);
-			});
-		});
-	};
+	// let postNewCommand = (newCommand) =>  {
+	// 	return $q((resolve, reject) => {
+	// 		$http.post(`${FBCreds.databaseURL}/commands.json`,
+	// 				JSON.stringify(newCommand))
+	// 			.then((ObjectFromFirebase) => {
+	// 				resolve(ObjectFromFirebase);
+	// 			})
+	// 		.catch((error) => {
+	// 			reject(error);
+	// 		});
+	// 	});
+	// };
 
-	let deleteCommand = (commandId) => {
-		console.log("delete in factory", commandId);
-		return $q((resolve, reject) => {
-			$http.delete(`${FBCreds.databaseURL}/commands/${commandId}.json`)
-				.then((ObjectFromFirebase) => {
-					resolve(ObjectFromFirebase);
-				});
-		});
-	};
+	// let deleteCommand = (commandId) => {
+	// 	console.log("delete in factory", commandId);
+	// 	return $q((resolve, reject) => {
+	// 		$http.delete(`${FBCreds.databaseURL}/commands/${commandId}.json`)
+	// 			.then((ObjectFromFirebase) => {
+	// 				resolve(ObjectFromFirebase);
+	// 			});
+	// 	});
+	// };
 
 	let getSingleCommand = (commandId) => {
 		return $q(function(resolve, reject) {
-			$http.get(`${FBCreds.databaseURL}/commands/${commandId}.json`)
+			// $http.get(`${FBCreds.databaseURL}/commands/${commandId}.json`)	///////////DO YOU NEED FBCreds???
+
 				.then(function(commandObject) {
 					resolve(commandObject.data);
 				})
@@ -58,17 +71,17 @@ app.factory("CommandStorage", ($q, $http, FBCreds) => {
 		});
 	};
 
-	let updateCommand = (commandId, editedCommand) => {
-		return $q(function(resolve, reject) {
-			$http.patch(`${FBCreds.databaseURL}/commands/${commandId}.json`, angular.toJson(editedCommand))
-				.then(function(ObjectFromFirebase) {
-					resolve(ObjectFromFirebase);
-				})
-			.catch(function(error) {
-				reject(error);
-			});
-		});
-	};
+	// let updateCommand = (commandId, editedCommand) => {
+	// 	return $q(function(resolve, reject) {
+	// 		$http.patch(`${FBCreds.databaseURL}/commands/${commandId}.json`, angular.toJson(editedCommand))
+	// 			.then(function(ObjectFromFirebase) {
+	// 				resolve(ObjectFromFirebase);
+	// 			})
+	// 		.catch(function(error) {
+	// 			reject(error);
+	// 		});
+	// 	});
+	// };
 
-	return {getCommandList, postNewCommand, deleteCommand, getSingleCommand, updateCommand};
+	return {getCommandList, getSingleCommand};	///////////DO YOU NEED ALL OF THESE???
 });
