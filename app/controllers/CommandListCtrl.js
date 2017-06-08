@@ -10,5 +10,6 @@ app.controller("CommandListCtrl", function($scope, CommandStorage, SearchTermDat
             // console.log("user", user);
             // console.log("commandCollection from CommandListCtrl.js", commandCollection);
             $scope.commands = commandCollection;
+
     });
 });

@@ -16,11 +16,11 @@ app.factory("CommandStorage", ($q, $http) => {  ///////////DON'T NEED FBCreds???
                 Object.keys(commandCollection.commands).forEach((key) => {   //changed--add .commands
                     // console.log("key: ", key);
                     // commandCollection[key].id = key;
-                    commandCollection[key] = key;        //added whole line
                     // console.log("commandCollection[key]: ", commandCollection[key]);
 
-                    commands.push(commandCollection[key]);
-                    // console.log("commands: ", commands);
+                    // commands.push(commandCollection[key]);
+                    commands.push(key);      //added whole line
+                    console.log("commands: ", commands);
                 });
                 resolve(commands);
             })

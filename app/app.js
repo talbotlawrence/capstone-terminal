@@ -8,9 +8,9 @@ app.config(function($routeProvider){
 			templateUrl: 'partials/command-list.html',
 			controller:"CommandListCtrl"
 		}).
-	when('/commands/:commandId', {
-		templateUrl: "partials/command-details.html",
-		controller: "CommandViewCtrl",
+		when('/commands/:commandId', {
+			templateUrl: "partials/command-details.html",
+			controller: "CommandViewCtrl",
 	}).
 	otherwise('/');
 });
