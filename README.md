@@ -45,6 +45,9 @@ http-server
 ```
 In your browser you should see somthing like this:
 ![terminal index_screen shot](img/index.png?raw=true)
+
+
+
 ![terminal details_screen shot](img/details.png?raw=true)
 
 ## Running the tests
