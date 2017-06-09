@@ -11,15 +11,4 @@ app.controller("CommandListCtrl", function($scope, CommandStorage, SearchTermDat
 			console.log("commandCollection from CommandListCtrl.js", commandCollection);
 			$scope.commands = commandCollection;
 		});
-
-	// $scope.commandDelete = function(commandId){
-	// 	console.log("commandId from commandDelete", commandId);
-	// 	CommandStorage.deleteCommand(commandId)
-	// 		.then(function(response) {
-	// 			CommandStorage.getCommandList(user).then(function(commandCollection){
-	// 				console.log("commandCollection from the delete", commandCollection);
-	// 				$scope.commands = commandCollection;
-	// 			});
-	// 		});
-	// };
 });
