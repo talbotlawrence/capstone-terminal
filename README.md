@@ -44,7 +44,7 @@ Run project in browser:
 http-server
 ```
 In your browser you should see somthing like this:
-![terminal index_screen shot](img/index.png?raw=true)\s\s
+![terminal index_screen shot](img/index.png?raw=true)<space><space>
 
 * * *
 
