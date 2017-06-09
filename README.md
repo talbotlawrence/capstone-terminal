@@ -43,7 +43,7 @@ Run project in browser:
 ```
 http-server
 ```
-In your browser you should see somthing like this:
+In your browser you should see something like this:
 ![terminal index_screen shot](public/img/index.png?raw=true)<space><space>
 
 * * *
