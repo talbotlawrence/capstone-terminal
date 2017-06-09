@@ -44,11 +44,11 @@ Run project in browser:
 http-server
 ```
 In your browser you should see somthing like this:
-![terminal index_screen shot](img/index.png?raw=true)<space><space>
+![terminal index_screen shot](public/img/index.png?raw=true)<space><space>
 
 * * *
 
-![terminal details_screen shot](img/details.png?raw=true)
+![terminal details_screen shot](public/img/details.png?raw=true)
 
 ## Running the tests
 No testing suites included in this project.
